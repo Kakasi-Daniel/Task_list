@@ -120,3 +120,13 @@ button:focus{
   background-color: #000;
 }
 
+.search_input{
+  background-color: #333;
+  border: none;
+  border-bottom: 2px #fff solid;
+  width: 100%;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+

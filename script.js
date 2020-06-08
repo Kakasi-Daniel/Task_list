@@ -3,6 +3,9 @@ const addBtn = document.querySelector('.add_btn');
 const taskList = document.querySelector('.tasks_list');
 const rmvBtn = document.querySelector('.delete_task');
 const clearBtn = document.querySelector('.clear_tasks');
+const taskTitle = document.querySelector('.task_title');
+const searchInput = document.querySelector('.search_input');
+const dTasks = document.querySelectorAll('.task');
 
 
 document.addEventListener('DOMContentLoaded' , e => {
@@ -20,16 +23,18 @@ document.addEventListener('DOMContentLoaded' , e => {
   </div>`;
   taskList.insertAdjacentHTML('afterbegin', taskL);
   })
-
+  checkList();
 })
 
 addBtn.addEventListener('click' , () => {
   addTask();
+  checkList();
 })
 
 window.addEventListener('keyup', e => {
   if (e.keyCode === 13){
     addTask();
+    checkList();
   }
 })
 
@@ -47,12 +52,14 @@ window.addEventListener('click', e => {
       }
       localStorage.setItem('tasks', JSON.stringify(tasks));
       e.target.parentElement.remove();
+      checkList();
 }})
 
 clearBtn.addEventListener('click', () => {
   taskList.innerHTML = '';
   let tasks;
   localStorage.clear();
+  checkList();
 })
 
 function addTask(){
@@ -75,4 +82,16 @@ function addTask(){
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
   taskInput.value = '';
+}
+
+function checkList () {
+  if (taskList.innerHTML === ''){
+    taskTitle.style.display = 'none';
+    clearBtn.style.display = 'none';
+    searchInput.style.display = 'none';
+  }else{
+    taskTitle.style.display = 'block';
+    clearBtn.style.display = 'block';
+    searchInput.style.display = 'block';
+  }
 }
