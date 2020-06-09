@@ -1,31 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-body{
+body {
   background: #333;
 }
 
-h3{
+h3 {
   font-size: 2rem;
   color: #f4f4f4;
   margin-bottom: 2rem;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }
-button:focus{
+button:focus {
   outline: none;
 }
 
-.container{
+.container {
   max-width: 500px;
   margin: auto;
   border-left: blue 2px solid;
@@ -37,13 +36,13 @@ button:focus{
   text-align: center;
 }
 
-.top{
+.top {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.bottom{
+.bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +50,7 @@ button:focus{
   margin-top: 2rem;
 }
 
-.task_input{
+.task_input {
   display: block;
   width: 400px;
   font-size: 1.2rem;
@@ -62,71 +61,70 @@ button:focus{
   color: #f4f4f4;
 }
 
-.add_btn{
+.add_btn {
   font-size: 1.3rem;
   display: inline-block;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   align-self: start;
   border: none;
-  padding: .2rem .75rem ;
+  padding: 0.2rem 0.75rem;
   color: blue;
   background-color: #333;
   border: blue 2px solid;
   cursor: pointer;
   width: 100px;
-  transition: background .2s ease;
+  transition: background 0.2s ease;
 }
 
-.add_btn:hover{
+.add_btn:hover {
   color: #000;
   background-color: royalblue;
   border: #000 2px solid;
 }
 
-.task{
+.task {
   border: 1px royalblue solid;
   margin-bottom: 5px;
   display: flex;
   width: 400px;
   color: #fff;
   font-size: 1.2rem;
-  padding: 0rem .3rem;
+  padding: 0rem 0.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.delete_task{
+.delete_task {
   color: red;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.clear_tasks{
+.clear_tasks {
   font-size: 1.3rem;
   display: inline-block;
   align-self: flex-start;
-  margin-top: .5rem;
-  padding: .2rem .5rem;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.5rem;
   border: none;
   background-color: transparent;
   color: #f4f4f4;
   border: 1px solid red;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 
-.clear_tasks:hover{
+.clear_tasks:hover {
   background-color: #000;
 }
 
-.search_input{
+.search_input {
   background-color: #333;
   border: none;
   border-bottom: 2px #fff solid;
   width: 100%;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #fff;
 }
-
