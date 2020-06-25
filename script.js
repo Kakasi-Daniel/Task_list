@@ -5,6 +5,7 @@ const rmvBtn = document.querySelector('.delete_task');
 const clearBtn = document.querySelector('.clear_tasks');
 const taskTitle = document.querySelector('.task_title');
 const searchInput = document.querySelector('.search_input');
+
 searchInput.addEventListener('input', (e) => {
   const txt = e.target.value.toLowerCase();
   document.querySelectorAll('.task').forEach(function (t) {

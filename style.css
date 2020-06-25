@@ -24,16 +24,21 @@ button:focus {
   outline: none;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+}
+
 .container {
   max-width: 500px;
   margin: auto;
   border-left: blue 2px solid;
   border-right: blue 2px solid;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: scroll;
 }
 
 .top {
@@ -41,6 +46,7 @@ button:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 15%;
 }
 .bottom {
   display: flex;
@@ -127,4 +133,13 @@ button:focus {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .task_input {
+    width: 350px;
+  }
+  .task {
+    width: 350px;
+  }
 }
